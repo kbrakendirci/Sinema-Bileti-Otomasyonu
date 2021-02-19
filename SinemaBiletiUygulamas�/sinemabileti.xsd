@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sinemabileti" targetNamespace="http://tempuri.org/sinemabileti.xsd" xmlns:mstns="http://tempuri.org/sinemabileti.xsd" xmlns="http://tempuri.org/sinemabileti.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sinemabiletiotomasyonuConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sinemabiletiotomasyonuConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SinemaBiletiUygulaması.Properties.Settings.GlobalReference.Default.sinemabiletiotomasyonuConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="film_bilgileriTableAdapter" GeneratorDataComponentClassName="film_bilgileriTableAdapter" Name="film_bilgileri" UserDataComponentName="film_bilgileriTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sinemabiletiotomasyonuConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FilmListesi" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="FilmListesi2" GeneratorSourceName="FilmListesi" GetMethodModifier="Public" GetMethodName="FilmListesi2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="FilmListesi2" UserSourceName="FilmListesi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        FilmId, FilmAdi, Yönetmen, FilmTürü, FilmSüresi, Tarih, YapimYili, Resim
+FROM            film_bilgileri</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FilmId" DataSetColumn="FilmId" />
+              <Mapping SourceColumn="FilmAdi" DataSetColumn="FilmAdi" />
+              <Mapping SourceColumn="Yönetmen" DataSetColumn="Yönetmen" />
+              <Mapping SourceColumn="FilmTürü" DataSetColumn="FilmTürü" />
+              <Mapping SourceColumn="FilmSüresi" DataSetColumn="FilmSüresi" />
+              <Mapping SourceColumn="Tarih" DataSetColumn="Tarih" />
+              <Mapping SourceColumn="YapimYili" DataSetColumn="YapimYili" />
+              <Mapping SourceColumn="Resim" DataSetColumn="Resim" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="salon_bilgileriTableAdapter" GeneratorDataComponentClassName="salon_bilgileriTableAdapter" Name="salon_bilgileri" UserDataComponentName="salon_bilgileriTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sinemabiletiotomasyonuConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `SalonId`, `SalonAdi` FROM `salon_bilgileri`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SalonId" DataSetColumn="SalonId" />
+              <Mapping SourceColumn="SalonAdi" DataSetColumn="SalonAdi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="satış_bilgileriTableAdapter" GeneratorDataComponentClassName="satış_bilgileriTableAdapter" Name="satış_bilgileri" UserDataComponentName="satış_bilgileriTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sinemabiletiotomasyonuConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `SatısId`, `KoltukNo`, `SalonAdi`, `FilmAdi`, `Tarih`, `Saat`, `Ad`, `Soyad`, `Ucret`, `Tarih2` FROM `satış_bilgileri`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SatısId" DataSetColumn="SatısId" />
+              <Mapping SourceColumn="KoltukNo" DataSetColumn="KoltukNo" />
+              <Mapping SourceColumn="SalonAdi" DataSetColumn="SalonAdi" />
+              <Mapping SourceColumn="FilmAdi" DataSetColumn="FilmAdi" />
+              <Mapping SourceColumn="Tarih" DataSetColumn="Tarih" />
+              <Mapping SourceColumn="Saat" DataSetColumn="Saat" />
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Soyad" DataSetColumn="Soyad" />
+              <Mapping SourceColumn="Ucret" DataSetColumn="Ucret" />
+              <Mapping SourceColumn="Tarih2" DataSetColumn="Tarih2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="satis_bilgileriTableAdapter" GeneratorDataComponentClassName="satis_bilgileriTableAdapter" Name="satis_bilgileri" UserDataComponentName="satis_bilgileriTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sinemabiletiotomasyonuConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `SatisId`, `KoltukNo`, `SalonAdi`, `FilmAdi`, `Tarih`, `Saat`, `Ad`, `Soyad`, `Ucret`, `Tarih2` FROM `satis_bilgileri`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SatisId" DataSetColumn="SatisId" />
+              <Mapping SourceColumn="KoltukNo" DataSetColumn="KoltukNo" />
+              <Mapping SourceColumn="SalonAdi" DataSetColumn="SalonAdi" />
+              <Mapping SourceColumn="FilmAdi" DataSetColumn="FilmAdi" />
+              <Mapping SourceColumn="Tarih" DataSetColumn="Tarih" />
+              <Mapping SourceColumn="Saat" DataSetColumn="Saat" />
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Soyad" DataSetColumn="Soyad" />
+              <Mapping SourceColumn="Ucret" DataSetColumn="Ucret" />
+              <Mapping SourceColumn="Tarih2" DataSetColumn="Tarih2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="seans_bilgileriTableAdapter" GeneratorDataComponentClassName="seans_bilgileriTableAdapter" Name="seans_bilgileri" UserDataComponentName="seans_bilgileriTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sinemabiletiotomasyonuConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="SeansListesi" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="SeansListesi2" GeneratorSourceName="SeansListesi" GetMethodModifier="Public" GetMethodName="SeansListesi2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="SeansListesi2" UserSourceName="SeansListesi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `SeansId`, `FilmAdi`, `SalonAdi`, `Tarih`, `Seans` FROM `seans_bilgileri`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SeansId" DataSetColumn="SeansId" />
+              <Mapping SourceColumn="FilmAdi" DataSetColumn="FilmAdi" />
+              <Mapping SourceColumn="SalonAdi" DataSetColumn="SalonAdi" />
+              <Mapping SourceColumn="Tarih" DataSetColumn="Tarih" />
+              <Mapping SourceColumn="Seans" DataSetColumn="Seans" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sinemabileti" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="sinemabileti" msprop:Generator_UserDSName="sinemabileti">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="film_bilgileri" msprop:Generator_TableClassName="film_bilgileriDataTable" msprop:Generator_TableVarName="tablefilm_bilgileri" msprop:Generator_RowChangedName="film_bilgileriRowChanged" msprop:Generator_TablePropName="film_bilgileri" msprop:Generator_RowDeletingName="film_bilgileriRowDeleting" msprop:Generator_RowChangingName="film_bilgileriRowChanging" msprop:Generator_RowEvHandlerName="film_bilgileriRowChangeEventHandler" msprop:Generator_RowDeletedName="film_bilgileriRowDeleted" msprop:Generator_RowClassName="film_bilgileriRow" msprop:Generator_UserTableName="film_bilgileri" msprop:Generator_RowEvArgName="film_bilgileriRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FilmId" msprop:Generator_ColumnVarNameInTable="columnFilmId" msprop:Generator_ColumnPropNameInRow="FilmId" msprop:Generator_ColumnPropNameInTable="FilmIdColumn" msprop:Generator_UserColumnName="FilmId" type="xs:int" />
+              <xs:element name="FilmAdi" msprop:Generator_ColumnVarNameInTable="columnFilmAdi" msprop:Generator_ColumnPropNameInRow="FilmAdi" msprop:Generator_ColumnPropNameInTable="FilmAdiColumn" msprop:Generator_UserColumnName="FilmAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Yönetmen" msprop:Generator_ColumnVarNameInTable="columnYönetmen" msprop:Generator_ColumnPropNameInRow="Yönetmen" msprop:Generator_ColumnPropNameInTable="YönetmenColumn" msprop:Generator_UserColumnName="Yönetmen">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FilmTürü" msprop:Generator_ColumnVarNameInTable="columnFilmTürü" msprop:Generator_ColumnPropNameInRow="FilmTürü" msprop:Generator_ColumnPropNameInTable="FilmTürüColumn" msprop:Generator_UserColumnName="FilmTürü">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FilmSüresi" msprop:Generator_ColumnVarNameInTable="columnFilmSüresi" msprop:Generator_ColumnPropNameInRow="FilmSüresi" msprop:Generator_ColumnPropNameInTable="FilmSüresiColumn" msprop:Generator_UserColumnName="FilmSüresi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tarih" msprop:Generator_ColumnVarNameInTable="columnTarih" msprop:Generator_ColumnPropNameInRow="Tarih" msprop:Generator_ColumnPropNameInTable="TarihColumn" msprop:Generator_UserColumnName="Tarih">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YapimYili" msprop:Generator_ColumnVarNameInTable="columnYapimYili" msprop:Generator_ColumnPropNameInRow="YapimYili" msprop:Generator_ColumnPropNameInTable="YapimYiliColumn" msprop:Generator_UserColumnName="YapimYili">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Resim" msprop:Generator_ColumnVarNameInTable="columnResim" msprop:Generator_ColumnPropNameInRow="Resim" msprop:Generator_ColumnPropNameInTable="ResimColumn" msprop:Generator_UserColumnName="Resim">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="salon_bilgileri" msprop:Generator_TableClassName="salon_bilgileriDataTable" msprop:Generator_TableVarName="tablesalon_bilgileri" msprop:Generator_RowChangedName="salon_bilgileriRowChanged" msprop:Generator_TablePropName="salon_bilgileri" msprop:Generator_RowDeletingName="salon_bilgileriRowDeleting" msprop:Generator_RowChangingName="salon_bilgileriRowChanging" msprop:Generator_RowEvHandlerName="salon_bilgileriRowChangeEventHandler" msprop:Generator_RowDeletedName="salon_bilgileriRowDeleted" msprop:Generator_RowClassName="salon_bilgileriRow" msprop:Generator_UserTableName="salon_bilgileri" msprop:Generator_RowEvArgName="salon_bilgileriRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SalonId" msprop:Generator_ColumnVarNameInTable="columnSalonId" msprop:Generator_ColumnPropNameInRow="SalonId" msprop:Generator_ColumnPropNameInTable="SalonIdColumn" msprop:Generator_UserColumnName="SalonId" type="xs:int" />
+              <xs:element name="SalonAdi" msprop:Generator_ColumnVarNameInTable="columnSalonAdi" msprop:Generator_ColumnPropNameInRow="SalonAdi" msprop:Generator_ColumnPropNameInTable="SalonAdiColumn" msprop:Generator_UserColumnName="SalonAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="satış_bilgileri" msprop:Generator_TableClassName="satış_bilgileriDataTable" msprop:Generator_TableVarName="tablesatış_bilgileri" msprop:Generator_RowChangedName="satış_bilgileriRowChanged" msprop:Generator_TablePropName="satış_bilgileri" msprop:Generator_RowDeletingName="satış_bilgileriRowDeleting" msprop:Generator_RowChangingName="satış_bilgileriRowChanging" msprop:Generator_RowEvHandlerName="satış_bilgileriRowChangeEventHandler" msprop:Generator_RowDeletedName="satış_bilgileriRowDeleted" msprop:Generator_RowClassName="satış_bilgileriRow" msprop:Generator_UserTableName="satış_bilgileri" msprop:Generator_RowEvArgName="satış_bilgileriRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SatısId" msprop:Generator_ColumnVarNameInTable="columnSatısId" msprop:Generator_ColumnPropNameInRow="SatısId" msprop:Generator_ColumnPropNameInTable="SatısIdColumn" msprop:Generator_UserColumnName="SatısId" type="xs:int" />
+              <xs:element name="KoltukNo" msprop:Generator_ColumnVarNameInTable="columnKoltukNo" msprop:Generator_ColumnPropNameInRow="KoltukNo" msprop:Generator_ColumnPropNameInTable="KoltukNoColumn" msprop:Generator_UserColumnName="KoltukNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalonAdi" msprop:Generator_ColumnVarNameInTable="columnSalonAdi" msprop:Generator_ColumnPropNameInRow="SalonAdi" msprop:Generator_ColumnPropNameInTable="SalonAdiColumn" msprop:Generator_UserColumnName="SalonAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FilmAdi" msprop:Generator_ColumnVarNameInTable="columnFilmAdi" msprop:Generator_ColumnPropNameInRow="FilmAdi" msprop:Generator_ColumnPropNameInTable="FilmAdiColumn" msprop:Generator_UserColumnName="FilmAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tarih" msprop:Generator_ColumnVarNameInTable="columnTarih" msprop:Generator_ColumnPropNameInRow="Tarih" msprop:Generator_ColumnPropNameInTable="TarihColumn" msprop:Generator_UserColumnName="Tarih">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Saat" msprop:Generator_ColumnVarNameInTable="columnSaat" msprop:Generator_ColumnPropNameInRow="Saat" msprop:Generator_ColumnPropNameInTable="SaatColumn" msprop:Generator_UserColumnName="Saat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ad" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_UserColumnName="Ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Soyad" msprop:Generator_ColumnVarNameInTable="columnSoyad" msprop:Generator_ColumnPropNameInRow="Soyad" msprop:Generator_ColumnPropNameInTable="SoyadColumn" msprop:Generator_UserColumnName="Soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ucret" msprop:Generator_ColumnVarNameInTable="columnUcret" msprop:Generator_ColumnPropNameInRow="Ucret" msprop:Generator_ColumnPropNameInTable="UcretColumn" msprop:Generator_UserColumnName="Ucret">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tarih2" msprop:Generator_ColumnVarNameInTable="columnTarih2" msprop:Generator_ColumnPropNameInRow="Tarih2" msprop:Generator_ColumnPropNameInTable="Tarih2Column" msprop:Generator_UserColumnName="Tarih2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="satis_bilgileri" msprop:Generator_TableClassName="satis_bilgileriDataTable" msprop:Generator_TableVarName="tablesatis_bilgileri" msprop:Generator_RowChangedName="satis_bilgileriRowChanged" msprop:Generator_TablePropName="satis_bilgileri" msprop:Generator_RowDeletingName="satis_bilgileriRowDeleting" msprop:Generator_RowChangingName="satis_bilgileriRowChanging" msprop:Generator_RowEvHandlerName="satis_bilgileriRowChangeEventHandler" msprop:Generator_RowDeletedName="satis_bilgileriRowDeleted" msprop:Generator_RowClassName="satis_bilgileriRow" msprop:Generator_UserTableName="satis_bilgileri" msprop:Generator_RowEvArgName="satis_bilgileriRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SatisId" msprop:Generator_ColumnVarNameInTable="columnSatisId" msprop:Generator_ColumnPropNameInRow="SatisId" msprop:Generator_ColumnPropNameInTable="SatisIdColumn" msprop:Generator_UserColumnName="SatisId" type="xs:int" />
+              <xs:element name="KoltukNo" msprop:Generator_ColumnVarNameInTable="columnKoltukNo" msprop:Generator_ColumnPropNameInRow="KoltukNo" msprop:Generator_ColumnPropNameInTable="KoltukNoColumn" msprop:Generator_UserColumnName="KoltukNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalonAdi" msprop:Generator_ColumnVarNameInTable="columnSalonAdi" msprop:Generator_ColumnPropNameInRow="SalonAdi" msprop:Generator_ColumnPropNameInTable="SalonAdiColumn" msprop:Generator_UserColumnName="SalonAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FilmAdi" msprop:Generator_ColumnVarNameInTable="columnFilmAdi" msprop:Generator_ColumnPropNameInRow="FilmAdi" msprop:Generator_ColumnPropNameInTable="FilmAdiColumn" msprop:Generator_UserColumnName="FilmAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tarih" msprop:Generator_ColumnVarNameInTable="columnTarih" msprop:Generator_ColumnPropNameInRow="Tarih" msprop:Generator_ColumnPropNameInTable="TarihColumn" msprop:Generator_UserColumnName="Tarih">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Saat" msprop:Generator_ColumnVarNameInTable="columnSaat" msprop:Generator_ColumnPropNameInRow="Saat" msprop:Generator_ColumnPropNameInTable="SaatColumn" msprop:Generator_UserColumnName="Saat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ad" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_UserColumnName="Ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Soyad" msprop:Generator_ColumnVarNameInTable="columnSoyad" msprop:Generator_ColumnPropNameInRow="Soyad" msprop:Generator_ColumnPropNameInTable="SoyadColumn" msprop:Generator_UserColumnName="Soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ucret" msprop:Generator_ColumnVarNameInTable="columnUcret" msprop:Generator_ColumnPropNameInRow="Ucret" msprop:Generator_ColumnPropNameInTable="UcretColumn" msprop:Generator_UserColumnName="Ucret">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tarih2" msprop:Generator_ColumnVarNameInTable="columnTarih2" msprop:Generator_ColumnPropNameInRow="Tarih2" msprop:Generator_ColumnPropNameInTable="Tarih2Column" msprop:Generator_UserColumnName="Tarih2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="seans_bilgileri" msprop:Generator_TableClassName="seans_bilgileriDataTable" msprop:Generator_TableVarName="tableseans_bilgileri" msprop:Generator_TablePropName="seans_bilgileri" msprop:Generator_RowDeletingName="seans_bilgileriRowDeleting" msprop:Generator_RowChangingName="seans_bilgileriRowChanging" msprop:Generator_RowEvHandlerName="seans_bilgileriRowChangeEventHandler" msprop:Generator_RowDeletedName="seans_bilgileriRowDeleted" msprop:Generator_UserTableName="seans_bilgileri" msprop:Generator_RowChangedName="seans_bilgileriRowChanged" msprop:Generator_RowEvArgName="seans_bilgileriRowChangeEvent" msprop:Generator_RowClassName="seans_bilgileriRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SeansId" msprop:Generator_ColumnVarNameInTable="columnSeansId" msprop:Generator_ColumnPropNameInRow="SeansId" msprop:Generator_ColumnPropNameInTable="SeansIdColumn" msprop:Generator_UserColumnName="SeansId" type="xs:int" />
+              <xs:element name="FilmAdi" msprop:Generator_ColumnVarNameInTable="columnFilmAdi" msprop:Generator_ColumnPropNameInRow="FilmAdi" msprop:Generator_ColumnPropNameInTable="FilmAdiColumn" msprop:Generator_UserColumnName="FilmAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalonAdi" msprop:Generator_ColumnVarNameInTable="columnSalonAdi" msprop:Generator_ColumnPropNameInRow="SalonAdi" msprop:Generator_ColumnPropNameInTable="SalonAdiColumn" msprop:Generator_UserColumnName="SalonAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tarih" msprop:Generator_ColumnVarNameInTable="columnTarih" msprop:Generator_ColumnPropNameInRow="Tarih" msprop:Generator_ColumnPropNameInTable="TarihColumn" msprop:Generator_UserColumnName="Tarih">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Seans" msprop:Generator_ColumnVarNameInTable="columnSeans" msprop:Generator_ColumnPropNameInRow="Seans" msprop:Generator_ColumnPropNameInTable="SeansColumn" msprop:Generator_UserColumnName="Seans">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:film_bilgileri" />
+      <xs:field xpath="mstns:FilmAdi" />
+    </xs:unique>
+    <xs:unique name="salon_bilgileri_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:salon_bilgileri" />
+      <xs:field xpath="mstns:SalonAdi" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
